@@ -1,0 +1,5 @@
+product: jvm/app
+
+settings:
+  jvm:
+    mainClass: comp2850.hello.MainKt
