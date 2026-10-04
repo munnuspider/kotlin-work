@@ -3,3 +3,13 @@
 
 import kotlin.math.sqrt
 import kotlin.system.exitProcess
+fun main(args: Array<String>) {
+    val a = args[0].toDouble()
+    val b = args[1].toDouble()
+    val c = args[2].toDouble()
+
+    val semi = (a+b+c) / 2.0
+    val area = sqrt(s*(s-a)*(s-b)*(s-c))
+
+    println(String.format("%.5f", area))
+}
