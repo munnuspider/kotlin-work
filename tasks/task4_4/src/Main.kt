@@ -10,4 +10,17 @@ import com.github.ajalt.mordant.terminal.Terminal
 
 fun main(args: Array<String>) {
     // Add your code here
+    if (args.size < 3) {
+        println("Missing temperature values")
+        exitProcess(1)
+    }
+    var minTempCelsius = args[0].toFloat()
+    val maxTempCelsius = args[1].toFloat()
+    val increment = args[2].toFloat()
+
+    while (minTempCelsius <= maxTempCelsius) {
+        val fahrenheit = (minTempCelsius*1.8f) + 32f
+        println("%.1f C = %.1f F".format(minTempCelsius, fahrenheit))
+        minTempCelsius += increment
+    }
 }
