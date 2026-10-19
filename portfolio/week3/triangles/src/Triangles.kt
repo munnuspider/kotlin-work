@@ -1,0 +1,29 @@
+// COMP2850 Portfolio: Week 3
+// Functions for working with triangle geometry
+
+import kotlin.math.sqrt
+
+data class Triangle(val first: Double, val second: Double, val third: Double)
+
+// Add isValidTriangle() and triangleArea() functions here
+fun isValidTriangle(triangle: Triangle): Boolean {
+    val a = triangle.first
+    val b = triangle.second
+    val c = triangle.third
+
+    if (a + b <= c || a + c <= b || b + c <= a) {
+        return false
+    }
+    return true
+}
+
+fun triangleArea(triangle: Triangle): Double {
+    require(isValidTriangle(triangle)) { "Invalid triangle: $triangle" }
+    val a = triangle.first
+    val b = triangle.second
+    val c = triangle.third
+
+    val s = (a + b + c) / 2.0
+    val area = sqrt(s*(s-a)*(s-b)*(s-c))
+    return area
+}
