@@ -18,9 +18,9 @@ fun main() {
         println("Illegal argument")
     }
     catch (error: Exception) {
-        println("Some sort of error occurred")
+        println("Some sort of error occurred") // i used ctrl + D
     }
     catch (error: ArithmeticException) {
-        println("You tried to divide by zero")
-    }
+        println("You tried to divide by zero") // 0 on the denominator
+    } // even if i remove this catch, the catch exception block will track down the 0 error regardless
 }

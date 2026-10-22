@@ -17,6 +17,8 @@ fun main(args: Array<String>) {
     val word = args[0].lowercase()
     val result = translate[word]
 
-    println(result)
-    //display(result)
+    //println(result)
+    display(result)
+    //results in the following error comment:
+    //Argument type mismatch: actual type is 'String?', but 'String' was expected.
 }
