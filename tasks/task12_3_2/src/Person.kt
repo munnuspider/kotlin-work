@@ -3,4 +3,5 @@ import kotlinx.datetime.LocalDate
 
 class Person(var name: String, val birth: LocalDate) {
     var isMarried = false
+    constructor() : this("Bhavya Trivedi", LocalDate(1997, 9, 22))
 }
