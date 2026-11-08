@@ -4,7 +4,7 @@
 package comp2850.banking
 
 class StudentAccount(holder: String) : BankAccount(holder) {
-    var iverdraft: Int = 0
+    var overdraft: Int = 0
         set(value) {
             require(value in 0..100) { "Overdraft must be between 0 and 100" }
             field = value
