@@ -4,4 +4,10 @@ import kotlinx.datetime.LocalDate
 
 class Person(var name: String, val birth: LocalDate) {
     var isMarried = false
+
+    var name = _name
+        set(value) {
+            require(value.isNotBlank()) { "name cannot be blank" }
+            field = value
+        }
 }
