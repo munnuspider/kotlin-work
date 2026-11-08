@@ -21,6 +21,6 @@ class StudentAccount(holder: String) : BankAccount(holder) {
     }
 
     override fun toString(): String {
-        return "Account for '$holder', balance=$balance, (overdraft=$overdraft)"
+        return "Account for $holder, balance=$balance, (overdraft=$overdraft)"
     }
 }
